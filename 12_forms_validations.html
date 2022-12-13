@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms & Validations</title>
+
+  <style>
+
+input:invalid {
+  border: 2px solid red;
+}
+
+input:valid {
+  border: 2px solid black;
+}
+
+input:invalid:required {
+  
+  background-image: linear-gradient(to right, pink, lightgreen);
+
+}
+
+}
+  </style>
+
+</head>
+<body>
+
+  <form>
+    <div>
+      <label for="name">Name</label><br>
+
+        <input type="text" id="name" name="name" placeholder="Insira Seu nome completo" required>
+
+      </div><br>
+        <div>
+
+      <label for="email">E-mail</label><br>
+      <input type="email" id="email" name="email" required>
+
+      </div><br>
+
+      <div>
+
+        <label for="age">Age</label><br>
+        <input type="number" id="age" name="age" min="18" max="100">
+
+      </div><br>
+
+      <div>
+          <label for="choose">Do you like study?</label><br>
+          <input type="text" id="choose"  name="choose"  pattern="yes|no|Yes|No|YES|NO" >
+      </div><br>
+
+      <div>
+          <label for="message">Send me a message</label><br>
+          <textarea id="message" name="message" cols="30" rows="10" minlength="2" maxlength="20"></textarea>
+      </div>
+
+      <div><input type="submit" value="Submit"></div>
+
+  </form>
+</body>
+</html>
